@@ -9,12 +9,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
             background: #0f172a;
             color: white;
+            line-height: 1.6;
         }
 
         header {
@@ -24,8 +25,8 @@
         }
 
         header img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             border: 4px solid #38bdf8;
             object-fit: cover;
@@ -33,6 +34,7 @@
 
         header h1 {
             margin: 10px 0;
+            font-size: 28px;
         }
 
         header p {
@@ -42,12 +44,13 @@
         .btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 18px;
+            padding: 10px 20px;
             background: #38bdf8;
             color: black;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: bold;
             text-decoration: none;
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -65,18 +68,11 @@
             margin: 20px 0;
             padding: 25px;
             border-radius: 15px;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: 0.8s;
-        }
-
-        .card.show {
-            opacity: 1;
-            transform: translateY(0);
+            transition: 0.4s;
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 10px 30px rgba(56,189,248,0.3);
         }
 
@@ -86,7 +82,7 @@
         }
 
         h3 {
-            margin-top: 15px;
+            margin-top: 10px;
             color: #94a3b8;
         }
 
@@ -100,21 +96,70 @@
             margin-top: 10px;
         }
 
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            background: #38bdf8;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="profile.jpg.jpeg">
+    <img src="profile.jpeg">
+
     <h1>GAYAM VARA PRASAD</h1>
-    <p>Diploma ECE Student</p>
+    <p>ECE Student | VLSI & Embedded Enthusiast</p>
 
     <p>📞 9704583541</p>
     <p>📧 prasadgayam0@gmail.com</p>
     <p>📍 Eluru, Andhra Pradesh</p>
 
-    <a href="#" class="btn">Download Resume (Coming Soon)</a>
+    <a href="https://www.linkedin.com/in/varaprasad-gayam/" target="_blank" class="btn">
+        LinkedIn / varaprasad-gayam
+    </a>
+
+    <br>
+
+    <a href="#" class="btn">Download Resume</a>
 </header>
 
 <div class="container">
@@ -122,7 +167,8 @@
     <div class="card">
         <h2>About Me</h2>
         <p>
-            Diploma student in Electronics and Communication Engineering with a strong passion for VLSI and Embedded Systems. Interested in semiconductor technology, digital circuit design, and embedded system development. Focused on building a career in VLSI design and embedded product engineering.
+            Passionate Electronics and Communication Engineering student focused on VLSI design and Embedded Systems.
+            Interested in semiconductor technology, digital design, and real-world product development.
         </p>
     </div>
 
@@ -132,67 +178,76 @@
             <li>C Programming</li>
             <li>HTML & CSS</li>
             <li>Digital Electronics</li>
-            <li>Linux Commands</li>
-            <li>Embedded Systems Basics</li>
-            <li>VLSI Fundamentals</li>
+            <li>Linux</li>
+            <li>Embedded Systems</li>
+            <li>VLSI Basics</li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>Project: Self-Service Printing Kiosk</h2>
+        <h2>Project</h2>
 
-        <p>Web-based automated printing system using Raspberry Pi and payment integration.</p>
+        <p><b>Self-Service Printing Kiosk</b></p>
 
         <ul>
-            <li>Frontend: HTML, CSS</li>
-            <li>Backend: Python</li>
-            <li>Payment: Razorpay</li>
-            <li>Printer Control: CUPS</li>
+            <li>Web-based automated printing system</li>
+            <li>Raspberry Pi integration</li>
+            <li>Payment using Razorpay</li>
         </ul>
 
-        <h3>System Workflow</h3>
-        <img src="workflow.png.jpeg" class="project-img">
+        <h3>Workflow</h3>
+        <img src="workflow.jpeg" class="project-img">
 
-        <h3>Hardware Setup</h3>
-        <img src="hardware.png.jpeg" class="project-img">
+        <h3>Hardware</h3>
+        <img src="hardware.jpeg" class="project-img">
 
-        <h3>Final Output (Outlet Setup)</h3>
-        <img src="connection.png.jpeg" class="project-img">
+        <h3>Final Output</h3>
+        <img src="connection.jpeg" class="project-img">
+    </div>
 
+    <div class="card">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Industrial Training – Linkwell Telesystems</li>
+            <li>Embedded Systems Workshop</li>
+            <li>Python Basics Course</li>
+        </ul>
     </div>
 
     <div class="card">
         <h2>Education</h2>
-        <p><b>Diploma in ECE</b> – Smt. B. Seetha Polytechnic</p>
+        <p><b>Diploma in ECE</b></p>
+        <p>Smt. B. Seetha Polytechnic</p>
         <p>2023–2026 | 90%</p>
     </div>
 
     <div class="card">
         <h2>Experience</h2>
-        <p><b>Trainee at – Linkwell Telesystem pvt Ltd Hyderabad</b></p>
+        <p><b>Industrial Training – Linkwell Telesystems</b></p>
         <ul>
-            <li>Functional Testing & Quality Assurance</li>
-            <li>Product Assembly & Integration</li>
+            <li>Testing & QA</li>
             <li>Firmware Installation</li>
-            <li>Troubleshooting Systems</li>
+            <li>Troubleshooting</li>
         </ul>
+    </div>
+
+    <div class="card">
+        <h2>Get In Touch</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
 </div>
 
-<script>
-    const cards = document.querySelectorAll(".card");
-
-    window.addEventListener("scroll", () => {
-        cards.forEach(card => {
-            const top = card.getBoundingClientRect().top;
-            if (top < window.innerHeight - 100) {
-                card.classList.add("show");
-            }
-        });
-    });
-</script>
+<footer>
+    <p>© 2026 Vara Prasad | Portfolio</p>
+</footer>
 
 </body>
-
 </html>
