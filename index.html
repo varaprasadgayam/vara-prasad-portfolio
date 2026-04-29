@@ -1,21 +1,27 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Vara Prasad Portfolio</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        body {
             background: #0f172a;
             color: white;
         }
 
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e293b, #020617);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         header img {
@@ -24,6 +30,11 @@
             border-radius: 50%;
             border: 4px solid #38bdf8;
             object-fit: cover;
+            transition: 0.4s;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
         }
 
         header h1 {
@@ -34,8 +45,12 @@
             color: #94a3b8;
         }
 
+        .contact p {
+            margin: 5px;
+        }
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
             padding: 20px;
         }
@@ -43,18 +58,20 @@
         .card {
             background: #1e293b;
             margin: 20px 0;
-            padding: 20px;
-            border-radius: 12px;
-            transition: 0.3s;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.4s;
+            animation: fadeUp 1s ease-in-out;
         }
 
         .card:hover {
-            transform: scale(1.02);
-            background: #334155;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
         }
 
         h2 {
             color: #38bdf8;
+            margin-bottom: 10px;
         }
 
         ul {
@@ -66,18 +83,59 @@
             text-decoration: none;
         }
 
-        .contact {
+        .project-card {
+            background: #020617;
+            padding: 15px;
+            border-radius: 10px;
             margin-top: 10px;
+            transition: 0.3s;
         }
+
+        .project-card:hover {
+            background: #1e293b;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="profile.jpg.jpeg">
+    <img src="profile.jpg">
     <h1>GAYAM VARA PRASAD</h1>
-    <p>Diploma in Electronics and Communication Engineering</p>
+    <p>Diploma ECE Student | Python | IoT Enthusiast</p>
 
     <div class="contact">
         <p>📞 9704583541</p>
@@ -96,7 +154,7 @@
     <div class="card">
         <h2>About Me</h2>
         <p>
-            Diploma student in Electronics and Communication Engineering (ECE) with hands-on experience in electronics device testing, IoT systems, and embedded technologies. Skilled in Python, C programming, and web-based system development.
+            Diploma student in Electronics and Communication Engineering with experience in IoT systems, embedded devices, and software development. Passionate about building real-world solutions and exploring new technologies.
         </p>
     </div>
 
@@ -106,41 +164,47 @@
             <li>C Programming</li>
             <li>Python</li>
             <li>HTML & CSS</li>
-            <li>Digital Electronics</li>
             <li>IoT</li>
-            <li>Verilog, VHDL (Basics)</li>
-            <li>Linux Commands (Basic)</li>
-            <li>Problem Solving</li>
+            <li>Linux Commands</li>
+            <li>Digital Electronics</li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>Project</h2>
-        <p><b>Self-Service Printing Kiosk</b></p>
-        <ul>
-            <li>Web-based printing system using HTML, CSS, Python</li>
-            <li>Integrated Razorpay payment gateway</li>
-            <li>Used Raspberry Pi with Raspberry Pi OS</li>
-            <li>Configured CUPS for printer management</li>
-            <li>Automated document upload and printing</li>
-        </ul>
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Self-Service Printing Kiosk</h3>
+            <p>
+                Web-based printing system with payment integration using Raspberry Pi and CUPS.
+            </p>
+
+            <ul>
+                <li>HTML, CSS (Frontend)</li>
+                <li>Python (Backend)</li>
+                <li>Razorpay Integration</li>
+                <li>Automated Printing System</li>
+            </ul>
+
+            <a href="#" class="btn">View Project</a>
+        </div>
+
     </div>
 
     <div class="card">
         <h2>Education</h2>
-        <p><b>Diploma in ECE</b> – Smt. B. Seetha Polytechnic (2023–2026)</p>
-        <p>Percentage: 90%</p>
-        <p><b>SSC</b> – ZP High School (2022–2023)</p>
+        <p><b>Diploma in ECE</b> – Smt. B. Seetha Polytechnic</p>
+        <p>2023 – 2026 | 90%</p>
     </div>
 
     <div class="card">
         <h2>Experience</h2>
-        <p><b>Industrial Training – Linkwell Telesystems Pvt. Ltd</b></p>
+        <p><b>Industrial Training – Linkwell Telesystems</b></p>
         <ul>
-            <li>Functional testing & quality assurance</li>
-            <li>Product assembly and integration</li>
-            <li>Firmware installation and updates</li>
-            <li>Troubleshooting hardware/software issues</li>
+            <li>Functional Testing & QA</li>
+            <li>Product Assembly & Integration</li>
+            <li>Firmware Installation</li>
+            <li>Troubleshooting Systems</li>
         </ul>
     </div>
 
