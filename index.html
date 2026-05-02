@@ -96,48 +96,11 @@
             margin-top: 10px;
         }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        input, textarea {
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 8px;
-            border: none;
-            outline: none;
-        }
-
-        textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        button {
-            padding: 12px;
-            border: none;
-            background: #38bdf8;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0ea5e9;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
             color: #94a3b8;
         }
-
     </style>
 </head>
 
@@ -154,12 +117,13 @@
     <p>📍 Eluru, Andhra Pradesh</p>
 
     <a href="https://www.linkedin.com/in/varaprasad-gayam/" target="_blank" class="btn">
-        LinkedIn / varaprasad-gayam
+        LinkedIn Profile
     </a>
 
     <br>
 
-    <a href="#" class="btn">Download Resume</a>
+    <!-- Resume Download Button -->
+    <a href="resume,jpg.jpeg" download class="btn">Download Resume</a>
 </header>
 
 <div class="container">
@@ -205,13 +169,18 @@
         <img src="connection.png.jpeg" class="project-img">
     </div>
 
+    <!-- Resume Section -->
     <div class="card">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Industrial Training – Linkwell Telesystems</li>
-            <li>Embedded Systems Workshop</li>
-            <li>Python Basics Course</li>
-        </ul>
+        <h2>My Resume</h2>
+
+        <p>Preview:</p>
+
+        <!-- Resume Image -->
+        <img src="resume,jpg.jpeg" class="project-img">
+
+        <br><br>
+
+        <a href="resume,jpg.jpeg" download class="btn">Download Resume</a>
     </div>
 
     <div class="card">
@@ -229,18 +198,6 @@
             <li>Firmware Installation</li>
             <li>Troubleshooting</li>
         </ul>
-    </div>
-
-    <div class="card">
-        <h2>Get In Touch</h2>
-
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
     </div>
 
 </div>
