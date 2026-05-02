@@ -96,6 +96,37 @@
             margin-top: 10px;
         }
 
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            background: #38bdf8;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -122,8 +153,9 @@
 
     <br>
 
-    <!-- Resume Download Button -->
-    <a href="resume,jpg.jpeg" download class="btn">Download Resume</a>
+    <!-- Resume Buttons -->
+    <a href="resume.jpg.jpeg" target="_blank" class="btn">View Resume</a>
+    <a href="resume.jpg.jpeg" download class="btn">Download Resume</a>
 </header>
 
 <div class="container">
@@ -169,20 +201,6 @@
         <img src="connection.png.jpeg" class="project-img">
     </div>
 
-    <!-- Resume Section -->
-    <div class="card">
-        <h2>My Resume</h2>
-
-        <p>Preview:</p>
-
-        <!-- Resume Image -->
-        <img src="resume,jpg.jpeg" class="project-img">
-
-        <br><br>
-
-        <a href="resume,jpg.jpeg" download class="btn">Download Resume</a>
-    </div>
-
     <div class="card">
         <h2>Education</h2>
         <p><b>Diploma in ECE</b></p>
@@ -198,6 +216,19 @@
             <li>Firmware Installation</li>
             <li>Troubleshooting</li>
         </ul>
+    </div>
+
+    <!-- Get In Touch Section -->
+    <div class="card">
+        <h2>Get In Touch</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
 </div>
