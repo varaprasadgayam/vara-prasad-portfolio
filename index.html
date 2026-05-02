@@ -4,86 +4,93 @@
 <head>
     <title>Vara Prasad Portfolio</title>
 
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background: #0f172a;
+            background: linear-gradient(120deg, #020617, #0f172a);
             color: white;
-            line-height: 1.6;
         }
 
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #1e293b, #020617);
+            padding: 80px 20px;
+            background: radial-gradient(circle at top, #1e293b, #020617);
         }
 
         header img {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 4px solid #38bdf8;
             object-fit: cover;
+            box-shadow: 0 0 25px rgba(56,189,248,0.6);
         }
 
         header h1 {
-            margin: 10px 0;
-            font-size: 28px;
+            margin-top: 15px;
+            font-size: 32px;
         }
 
         header p {
             color: #94a3b8;
+            margin-top: 5px;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #38bdf8;
+            margin: 10px 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
             color: black;
-            border-radius: 8px;
+            border-radius: 30px;
             font-weight: bold;
             text-decoration: none;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: #0ea5e9;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #38bdf8;
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 20px;
+            padding: 30px 20px;
         }
 
         .card {
-            background: #1e293b;
-            margin: 20px 0;
-            padding: 25px;
-            border-radius: 15px;
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            margin: 25px 0;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(56,189,248,0.2);
             transition: 0.4s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(56,189,248,0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(56,189,248,0.3);
         }
 
         h2 {
             color: #38bdf8;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         h3 {
-            margin-top: 10px;
-            color: #94a3b8;
+            margin-top: 15px;
+            color: #cbd5f5;
         }
 
         ul {
@@ -92,8 +99,13 @@
 
         .project-img {
             width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
+            border-radius: 12px;
+            margin-top: 12px;
+            transition: 0.3s;
+        }
+
+        .project-img:hover {
+            transform: scale(1.03);
         }
 
         form {
@@ -103,28 +115,25 @@
 
         input, textarea {
             margin: 10px 0;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 14px;
+            border-radius: 10px;
             border: none;
             outline: none;
+            background: #020617;
+            color: white;
         }
 
         textarea {
-            resize: none;
             height: 120px;
         }
 
         button {
-            padding: 12px;
+            padding: 14px;
             border: none;
-            background: #38bdf8;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+            border-radius: 10px;
             font-weight: bold;
             cursor: pointer;
-        }
-
-        button:hover {
-            background: #0ea5e9;
         }
 
         footer {
@@ -137,9 +146,8 @@
 
 <body>
 
-<header>
+<header data-aos="fade-down">
     <img src="profile.jpg.jpeg">
-
     <h1>GAYAM VARA PRASAD</h1>
     <p>ECE Student | VLSI & Embedded Enthusiast</p>
 
@@ -147,28 +155,24 @@
     <p>📧 prasadgayam0@gmail.com</p>
     <p>📍 Eluru, Andhra Pradesh</p>
 
-    <a href="https://www.linkedin.com/in/varaprasad-gayam/" target="_blank" class="btn">
-        LinkedIn Profile
-    </a>
+    <a href="https://www.linkedin.com/in/varaprasad-gayam/" target="_blank" class="btn">LinkedIn</a>
 
     <br>
 
-    <!-- Resume Buttons -->
-    <a href="resume.jpg.jpeg" target="_blank" class="btn">View Resume</a>
-    <a href="resume.jpg.jpeg" download class="btn">Download Resume</a>
+    <a href="resume,jpg.jpeg" target="_blank" class="btn">View Resume</a>
+    <a href="resume,jpg.jpeg" download class="btn">Download Resume</a>
 </header>
 
 <div class="container">
 
-    <div class="card">
+    <div class="card" data-aos="fade-up">
         <h2>About Me</h2>
         <p>
-            Passionate Electronics and Communication Engineering student focused on VLSI design and Embedded Systems.
-            Interested in semiconductor technology, digital design, and real-world product development.
+            Passionate ECE student focused on VLSI and Embedded Systems. I enjoy building real-world projects.
         </p>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-right">
         <h2>Skills</h2>
         <ul>
             <li>C Programming</li>
@@ -180,15 +184,15 @@
         </ul>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
         <h2>Project</h2>
 
         <p><b>Self-Service Printing Kiosk</b></p>
 
         <ul>
-            <li>Web-based automated printing system</li>
-            <li>Raspberry Pi integration</li>
-            <li>Payment using Razorpay</li>
+            <li>Upload → Payment → Print automation</li>
+            <li>Raspberry Pi controller</li>
+            <li>Razorpay integration</li>
         </ul>
 
         <h3>Workflow</h3>
@@ -197,18 +201,18 @@
         <h3>Hardware</h3>
         <img src="hardware.png.jpeg" class="project-img">
 
-        <h3>Final Output Outlet</h3>
+        <h3>Final Output</h3>
         <img src="connection.png.jpeg" class="project-img">
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-left">
         <h2>Education</h2>
         <p><b>Diploma in ECE</b></p>
         <p>Smt. B. Seetha Polytechnic</p>
         <p>2023–2026 | 90%</p>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up">
         <h2>Experience</h2>
         <p><b>Industrial Training – Linkwell Telesystems</b></p>
         <ul>
@@ -218,24 +222,31 @@
         </ul>
     </div>
 
-    <!-- Get In Touch Section -->
-    <div class="card">
+    <div class="card" data-aos="flip-up">
         <h2>Get In Touch</h2>
 
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
-
             <button type="submit">Send Message</button>
         </form>
     </div>
 
 </div>
 
-<footer>
+<footer data-aos="fade-in">
     <p>© 2026 Vara Prasad | Portfolio</p>
 </footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
 
 </body>
 </html>
